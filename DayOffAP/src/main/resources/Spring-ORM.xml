@@ -1,0 +1,30 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean"
+		destroy-method="destroy">
+		<property name="dataSource">
+			<ref bean="dataSource"></ref>
+		</property>
+		<property name="mappingResources">
+			<list>
+				<value>Event.hbm.xml</value>
+				<value>User.hbm.xml</value>
+				<value>Department.hbm.xml</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.SQLServerDialect
+				</prop>
+				<prop key="hibernate.temp.use_jdbc_metadata_defaults">
+					false
+				</prop>
+			</props>
+		</property>
+	</bean>
+</beans>

@@ -1,0 +1,88 @@
+@import "parameter.less";
+
+* {
+	box-sizing: border-box;
+	&:before {
+		box-sizing: border-box;
+	}
+	&:after {
+		box-sizing: border-box;
+	}
+}
+body {
+	//background-image: url("https://upload.wikimedia.org/wikipedia/commons/c/c2/Glorious-blue-mountain-range.jpg");
+	font-family: @font_family_1;
+	font-size: @fontsize_mid;
+	background-color: @background_body;
+	padding: 50px;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+}
+.well {
+	//border: 1px solid @color_main;
+	border: 0px;
+	background: @background_body;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	padding: 0px;
+}
+.fc-month-view .fc-scroller {
+   height: auto!important;
+   overflow-y: auto;
+}
+.fc-view { /* cancel the scroll bar in month page */
+	//background-color: white;
+}
+.fc-event {
+	background-color: @color_main;
+	border: 1px solid @color_main;
+	color: @color_text;
+}
+.alert-info {
+	background-image: linear-gradient(to bottom, @color_info 0, @color_info 100%);
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+#calendar {
+	.btn-default {
+		text-shadow: none;
+		background-image: none;
+		background-color: @background_subbody;
+		color: @color_main_depper;
+		border: 1px solid @color_main;
+		&:hover {
+			background-color: @color_main;
+			color: @color_text;
+		}
+	}
+	.btn-default.active {
+		background-image: none;
+		background-color: @color_main;
+		color: @color_text;
+		border: 1px solid @color_main;
+	}
+	.panel {
+		>.panel-heading {
+			background-image: none;
+			background-color: @color_main;
+			color: @color_text;
+		}
+	}
+	.panel.panel-default {
+		border: 1px solid @color_main;
+	}
+	.myevent {
+		background-color: @color_myevent;
+	}
+}
+
+
+
+.swal-overlay {
+	background-color: #80DDD23B;
+}
+.swal-button {
+	background-color: @color_main;
+}

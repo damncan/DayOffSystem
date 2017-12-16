@@ -1,0 +1,74 @@
+@import "parameter.less";
+
+@media (max-width:768px) {
+	#login-dp {
+		background-color: @background_transparent;
+		color: @background_subbody;
+		.bottom {
+			background-color: @background_transparent;
+			border-top: 0 none;
+		}
+	}
+}
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.open>a {
+	background-image: linear-gradient(to bottom, @color_main_depper 0, @color_main_depper 100%);
+}
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav>li>a {
+	color: #FDFBF7;
+}
+
+
+.navbar-inverse {
+	background-color: @color_main;
+	border-color: @color_main;
+	background-image: linear-gradient(to bottom, @color_main 0, @color_main 100%);
+	color: @color_text;
+}
+.navbar-brand {
+	font-size: @fontsize_large - 12px;
+}
+#login-dp {
+	font-size: @fontsize_mid;
+	color: black;
+	min-width: 250px;
+	padding: 14px 14px 0;
+	overflow: hidden;
+	background-color: @background_transparent;
+	.help-block {
+		font-size: @fontsize_mid;
+	}
+	.bottom {
+		background-color: @background_transparent;
+		border-top: 1px solid #ddd;
+		clear: both;
+		padding: 14px;
+	}
+	.social-buttons {
+		margin: 12px 0;
+		a {
+			width: 49%;
+		}
+	}
+	.form-group {
+		margin-bottom: 10px;
+	}
+}
+.btn-fb {
+	float: left;
+	color: @background_subbody;
+	background-color: @background_fb;
+	&:hover {
+		color: @background_subbody;
+		background-color: @background_fb_hover;
+	}
+}
+.btn-tw {
+	float: right;
+	color: @background_subbody;
+	background-color: @background_tw;
+	&:hover {
+		color: @background_subbody;
+		background-color: @background_tw_hover;
+	}
+}

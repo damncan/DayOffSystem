@@ -1,0 +1,26 @@
+<!DOCTYPE hibernate-mapping 
+    PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<!-- SQL Server Reserved word: https://technet.microsoft.com/zh-tw/library/ms173340(v=sql.110).aspx -->
+	<!-- User -> [User] -->
+	<class name="tw.damncan.model.User" table="TB_User">
+		<id name="id" column="user_ID">
+			<generator class="native"></generator>
+		</id>
+		<property name="account" column="account"></property>
+		<property name="pswd" column="pswd"></property>
+		<property name="name" column="name"></property>
+		<property name="email" column="email"></property>
+		<property name="leaveAmount" column="leaveAmount"></property>
+		<property name="depID" column="depID"></property>
+		
+		<set name="events" table="TB_Event" inverse="true" lazy="false" fetch="select">
+            <key>
+            	<column name="user_ID" not-null="true" />
+            </key>
+            <one-to-many class="tw.damncan.model.Event"/>
+        </set>
+	</class>
+</hibernate-mapping>

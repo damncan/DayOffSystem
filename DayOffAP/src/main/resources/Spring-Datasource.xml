@@ -1,0 +1,24 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="dataSource"
+		class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
+		<!-- <property name="url" value="jdbc:sqlserver://localhost:1433;databaseName=DAYOFF" /> -->
+		<property name="url" value="jdbc:sqlserver://localhost\SQLEXPRESS;databaseName=DAYOFF" />
+		<property name="username" value="test2" />
+		<property name="password" value="12345" />
+		
+		<!-- http://sjsky.iteye.com/blog/1105674 -->
+		<property name="maxActive" value="20" /> <!-- max connection number at the same time -->
+        <property name="initialSize" value="1" /> <!-- connection number when initialization -->
+        <property name="maxWait" value="60000" /> <!-- max waiting time: 60000ms -->
+        <property name="maxIdle" value="15" /> <!-- max idle (usable) connection number -->
+        <property name="minIdle" value="5" /> <!-- min idle (usable) connection number -->
+        <property name="removeAbandoned" value="true" /> <!-- recycle connection when removeAbandonedTimeout is triggered -->
+        <property name="removeAbandonedTimeout" value="180" /> <!-- time limit for connection recycling: 180s -->
+	</bean>
+</beans>
