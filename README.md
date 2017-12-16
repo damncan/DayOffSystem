@@ -24,17 +24,17 @@ This project is designed with 3-tier architecture: web server, AP server and SQL
 **Web Server**
 
 In the web server, I use Spring 4 to achieve a MVC structure. To keep the controller layer simply handle request/response, I extract all business logic into the service layer.
-<img alt="Web server" src="/img/web server.png" title="Web server" style="width: 200px;"/>
+<img alt="Web server" src="/img/web server.png" title="Web server" width="600"/>
 
 **AP Server**
 
 In the AP server, all database query logic (hibernate session) are put in the DAO layer. XML configuration contains three parts: datasource, sessionFactory (ORM settings) and DAOs (Dependency Injection: refer datasource and sessionFactory to every DAO by XML setting).
-<img alt="AP server" src="/img/ap server.png" title="AP server" style="width: 200px;"/>
+<img alt="AP server" src="/img/ap server.png" title="AP server" width="600"/>
 
 **SQL Server**
 
 Each department cotains several users; each user has several leave events.
-<img alt="SQL server" src="/img/ERD.png" title="SQL server" style="width: 200px;"/>
+<img alt="SQL server" src="/img/ERD.png" title="SQL server" width="600"/>
 
 
 
