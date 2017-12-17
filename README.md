@@ -48,7 +48,7 @@ The website calendar is implemented with a JavaScript library, FullCalendar. All
 
 **Login**
 
-<img alt="Login" src="/img/login.gif" title="Login" width="600"/>
+<img alt="Login" src="/img/login.gif" title="Login" width="300"/>
 
 **Insert**
 
