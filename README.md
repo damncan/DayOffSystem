@@ -6,7 +6,7 @@ It is a little project which dedicated to reduce labor cost for small and medium
 
 
 
-## Development Environment:
+## Development Environment
 - JDK 1.8.0_151
 - Eclipse Oxygen IDE for Java EE Developers
 - Maven 3.3.9
