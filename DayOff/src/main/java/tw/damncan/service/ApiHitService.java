@@ -39,8 +39,7 @@ public class ApiHitService {
 			// Execute and get the response.
 			HttpResponse response = httpclient.execute(httppost);
 			HttpEntity entity = response.getEntity();
-			System.out.println(url);
-			System.out.println(response.getStatusLine().getStatusCode());
+			
 			if(response.getStatusLine().getStatusCode() == 200){
 				String jsonString = EntityUtils.toString(entity);
 				

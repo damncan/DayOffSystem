@@ -43,4 +43,21 @@ Each department cotains several users; each user has several leave events.
 
 
 ## Demo
+
+The website calendar is implemented with a JavaScript library, FullCalendar. All JavaScript's popup boxes are replaced with SweetAlert2.
+
 **Login**
+
+<img alt="Login" src="/img/login.gif" title="Login" width="600"/>
+
+**Insert**
+
+<img alt="Insert" src="/img/insert.gif" title="Insert" width="600"/>
+
+**Update**
+
+<img alt="Update" src="/img/update.gif" title="Update" width="600"/>
+
+**Remove**
+
+<img alt="Remove" src="/img/delete.gif" title="Remove" width="600"/>

@@ -27,7 +27,7 @@ public class AuthorityController {
     public ResponseEntity<LoginUser> login(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, NoSuchAlgorithmException, InstantiationException, IllegalAccessException {
 		AuthorityService authorityService = new AuthorityService(context);
 		LoginUser loginUser = (LoginUser) authorityService.login(request.getParameter("account"), request.getParameter("pswd"));
-		System.out.println(request.getParameter("account"));
+		
 		if(loginUser != null){
 			request.getSession().setAttribute("loginUser", loginUser);
         	return new ResponseEntity<LoginUser>(loginUser, HttpStatus.OK);

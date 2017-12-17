@@ -15,7 +15,7 @@ public class AuthorityService {
     	List<NameValuePair> params = new ArrayList<NameValuePair>(2);
 		params.add(new BasicNameValuePair("account", account));
 		params.add(new BasicNameValuePair("pswd", pswd));
-		System.out.println(account);
+		
     	ApiHitService apiHitService = new ApiHitService();
     	LoginUser loginUser = (LoginUser) apiHitService.Post("http://localhost:8080/DayOffAP/rest/authority/login", params, LoginUser.class);
     	return loginUser;
